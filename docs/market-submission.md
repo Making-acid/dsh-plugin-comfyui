@@ -8,12 +8,15 @@ DSH 客户端的插件目录来源；市场里的插件卡片就是它的条目�
 
 | 项 | 状态 |
 | --- | --- |
+| GitHub 仓库 | ✅ https://github.com/Making-acid/dsh-plugin-comfyui （public） |
 | `dsh.bundle.patch` 清单 | ✅ `package.json` 已声明 |
-| 真实可用代码 | ✅ 三个工具 + 提示词段落，含自测脚本 |
-| `dsh-plugin` GitHub topic | ✅ 已在仓库设置 |
-| 仓库创建满 1 天 | ⏳ 新建仓库需等 1 天后才能提交 PR（CI 自动检查） |
+| 真实可用代码 | ✅ 三个工具 + 提示词段落，含 smoke 与附件回归测试 |
+| `dsh-plugin` GitHub topic | ✅ 已设置（另含 dsh / deepseek-harness / comfyui / image-generation / stable-diffusion / sdxl / cordis） |
+| 仓库创建满 1 天 | ⏳ 仓库创建于 2026-10-26，CI 要求满 1 天后才能提交 PR |
+| GitHub Release tarball（可选） | ✅ `v1.0.0`，资产名 `dsh-plugin-comfyui.tgz`（版本无关） |
 | npm 包（可选） | ⏳ 发布后市场可显示下载量；不发布不影响收录 |
 | 截图 | ✅ `screenshots.json` + `assets/screenshot-*.jpg`，市场会自动抓取 |
+| 市场卡片图标（可选） | ✅ `assets/icon-180.png`，条目里用 raw.githubusercontent 链接引用 |
 
 ## 提交内容
 
