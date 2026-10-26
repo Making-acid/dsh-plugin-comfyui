@@ -1,0 +1,58 @@
+{
+  "name": "dsh-plugin-comfyui",
+  "version": "1.0.0",
+  "description": "Local ComfyUI image generation for DeepSeek Harness: finds or starts the ComfyUI installed on this computer and turns an image request into a real picture, attached in chat. / 让 DeepSeek Harness 用本机 ComfyUI 真正生图：自动查找或启动本地服务，在对话里完成文生图并附图。",
+  "type": "module",
+  "main": "index.js",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "author": "Making-acid",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "comfyui",
+    "stable-diffusion",
+    "sdxl",
+    "image-generation",
+    "text-to-image",
+    "local"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Making-acid/dsh-plugin-comfyui.git"
+  },
+  "homepage": "https://github.com/Making-acid/dsh-plugin-comfyui#readme",
+  "bugs": {
+    "url": "https://github.com/Making-acid/dsh-plugin-comfyui/issues"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "locale",
+    "assets",
+    "screenshots.json",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "test": "node scripts/smoke.mjs",
+    "test:attachments": "node scripts/test-attachments.mjs"
+  }
+}

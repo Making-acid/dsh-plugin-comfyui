@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "ComfyUI 本地生图",
+    "description": "让 DeepSeek Harness 用本机安装的 ComfyUI 真正生成图片：按需查找或启动本地服务，并在对话里完成文生图。"
+  }
+}

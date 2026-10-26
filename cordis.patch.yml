@@ -1,0 +1,39 @@
+# dsh-plugin-comfyui bundle patch.
+#
+# Inserts one Host row: the plugin that owns the local ComfyUI integration. It
+# registers the model-facing tools `comfyui_status`, `comfyui_start` and
+# `comfyui_generate`, plus a short system-prompt section stating that this
+# machine can really generate images.
+#
+# Every value below is optional; the plugin fills in these defaults. A patch
+# replaces the targeted row's whole `config`, so user overrides should keep only
+# the fields they actually change.
+
+- insert:
+    - id: comfyui
+      name: dsh-plugin-comfyui
+      config:
+        # Where the ComfyUI HTTP API listens. Change the port here if your
+        # ComfyUI runs elsewhere (for example a remote machine on your LAN:
+        # http://192.168.1.20:8188).
+        baseUrl: http://127.0.0.1:8188
+        # Start ComfyUI automatically when an image is requested and no server
+        # is running. Set false to require a manually started server.
+        autoStart: true
+        # Optional explicit install directory (either the portable root that
+        # contains `ComfyUI/` + `python_embeded/`, or the `ComfyUI` folder
+        # itself). Empty = search for it. The plugin writes the discovered path
+        # back into the profile patch on the first auto-start.
+        installDir: ''
+        # Optional extra directories to search for a ComfyUI installation.
+        searchDirs: []
+        # Optional preset checkpoint file name; empty = the first checkpoint
+        # reported by the server.
+        checkpoint: ''
+        # Generation defaults.
+        sampler: dpmpp_2m
+        scheduler: karras
+        steps: 28
+        cfg: 5
+        width: 1024
+        height: 1024

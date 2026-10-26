@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "ComfyUI Image Generation",
+    "description": "Lets DeepSeek Harness generate real images with the ComfyUI installed on this computer: finds or starts the local server on demand and renders text-to-image from chat."
+  }
+}
