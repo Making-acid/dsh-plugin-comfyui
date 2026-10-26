@@ -22,3 +22,6 @@ debug-*.jsonl
 Thumbs.db
 .vscode/
 .idea/
+
+# Local operations runbook for this machine (kept out of the public repo)
+docs/market-pr-runbook.md
