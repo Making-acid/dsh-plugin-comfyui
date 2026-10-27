@@ -1,10 +1,15 @@
 # dsh-plugin-comfyui
 
+[![Awesome DSH Plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com/)
+
 [English](#english) · **中文**
 
 让 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）用本机
 [ComfyUI](https://www.comfy.org) **真正生成图片**。安装后，模型接到「画一张…」「生成一张…的图」这类指令时，
 不再回答自己不能生图，而是先查 ComfyUI、必要时自动启动服务，然后完成文生图并把图片**附回对话**。
+
+> 已收录进 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)（dsh-market 的目录来源），
+> 收录 PR：[#9733](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/9733)（已合并）。
 
 ![示例：橘猫窗台](assets/screenshot-1.jpg)
 ![示例：雨夜霓虹街景](assets/screenshot-2.jpg)

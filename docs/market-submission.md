@@ -14,9 +14,10 @@ DSH 客户端的插件目录来源；市场里的插件卡片就是它的条目�
 | `dsh-plugin` GitHub topic | ✅ 已设置（另含 dsh / deepseek-harness / comfyui / image-generation / stable-diffusion / sdxl / cordis） |
 | 仓库创建满 1 天 | ✅ 2026-10-26T02:40:43Z 创建，2026-10-27T03:00Z 提交时已满 24.3 小时 |
 | **市场收录 PR** | ✅ **https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/9733**（2026-10-27 自动提交） |
-| **PR CI** | ✅ `check` 通过（14m18s）、`Submission gate` 通过；PR `MERGEABLE` / `CLEAN`，等待维护者评审合并 |
+| **PR CI** | ✅ `check` 通过（14m18s）、`Submission gate` 通过 |
+| **收录结果** | ✅ **已合并**：2026-10-27T17:19:04Z（merge commit `1962a7c`），条目已在 `main` 的 `data/plugins/Making-acid__dsh-plugin-comfyui.yml` |
+| 收录生效 | ⏳ 官网 / dsh-market 的 `index.json` 每日构建，合并后尚未包含该条目，等下一次构建即可在市场中搜到 |
 | PR 变更范围 | ✅ 仅新增 `data/plugins/Making-acid__dsh-plugin-comfyui.yml`（+7 行），未改动其他条目 |
-| 收录生效 | ⏳ 合并后官网与 dsh-market 次日构建自动收录 |
 | GitHub Release tarball（可选） | ✅ `v1.0.0`，资产名 `dsh-plugin-comfyui.tgz`（版本无关） |
 | npm 包（可选） | ⏳ 发布后市场可显示下载量；不发布不影响收录 |
 | 截图 | ✅ `screenshots.json` + `assets/screenshot-*.jpg`，市场会自动抓取 |
