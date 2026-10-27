@@ -12,7 +12,8 @@ DSH 客户端的插件目录来源；市场里的插件卡片就是它的条目�
 | `dsh.bundle.patch` 清单 | ✅ `package.json` 已声明 |
 | 真实可用代码 | ✅ 三个工具 + 提示词段落，含 smoke 与附件回归测试 |
 | `dsh-plugin` GitHub topic | ✅ 已设置（另含 dsh / deepseek-harness / comfyui / image-generation / stable-diffusion / sdxl / cordis） |
-| 仓库创建满 1 天 | ⏳ 仓库创建于 2026-10-26，CI 要求满 1 天后才能提交 PR |
+| 仓库创建满 1 天 | ✅ 2026-10-26T02:40:43Z 创建，2026-10-27T03:00Z 提交时已满 24.3 小时 |
+| **市场收录 PR** | ✅ **https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/9733**（2026-10-27 自动提交） |
 | GitHub Release tarball（可选） | ✅ `v1.0.0`，资产名 `dsh-plugin-comfyui.tgz`（版本无关） |
 | npm 包（可选） | ⏳ 发布后市场可显示下载量；不发布不影响收录 |
 | 截图 | ✅ `screenshots.json` + `assets/screenshot-*.jpg`，市场会自动抓取 |
