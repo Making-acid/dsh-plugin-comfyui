@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-comfyui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Local ComfyUI image generation for DeepSeek Harness: finds or starts the ComfyUI installed on this computer and turns an image request into a real picture, attached in chat. / 让 DeepSeek Harness 用本机 ComfyUI 真正生图：自动查找或启动本地服务，在对话里完成文生图并附图。",
   "type": "module",
   "main": "index.js",
@@ -36,6 +36,7 @@
     "cordis.patch.yml",
     "icon.svg",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "dsh": {
@@ -45,7 +46,7 @@
   },
   "engines": {
     "node": ">=20",
-    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+    "dsh": ">=0.2.0-rc.2 <0.3.0-0"
   },
   "publishConfig": {
     "access": "public",
@@ -53,6 +54,7 @@
   },
   "scripts": {
     "test": "node scripts/smoke.mjs",
-    "test:attachments": "node scripts/test-attachments.mjs"
+    "test:attachments": "node scripts/test-attachments.mjs",
+    "test:dsh": "node scripts/check-dsh.mjs"
   }
 }

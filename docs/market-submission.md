@@ -18,8 +18,9 @@ DSH 客户端的插件目录来源；市场里的插件卡片就是它的条目�
 | **收录结果** | ✅ **已合并**：2026-10-27T17:19:04Z（merge commit `1962a7c`），条目已在 `main` 的 `data/plugins/Making-acid__dsh-plugin-comfyui.yml` |
 | 收录生效 | ⏳ 官网 / dsh-market 的 `index.json` 每日构建，合并后尚未包含该条目，等下一次构建即可在市场中搜到 |
 | PR 变更范围 | ✅ 仅新增 `data/plugins/Making-acid__dsh-plugin-comfyui.yml`（+7 行），未改动其他条目 |
-| GitHub Release tarball（可选） | ✅ `v1.0.0`，资产名 `dsh-plugin-comfyui.tgz`（版本无关） |
-| npm 包（可选） | ⏳ 发布后市场可显示下载量；不发布不影响收录 |
+| 后续版本更新 | ✅ 条目本身不带版本号；升级只改本仓库并发布新的 GitHub Release，无需再提 PR |
+| GitHub Release tarball（可选） | ✅ `v1.0.1`（2026-11-09，含 DSH 0.2.2 兼容性更新），资产名 `dsh-plugin-comfyui.tgz`（版本无关） |
+| npm 包（可选） | ❌ 不可用：npm 上的 `dsh-plugin-comfyui` 已被其他作者占用（fanlr 的另一个 ComfyUI 插件）。市场安装请走 GitHub 源 / Release tarball；如需 npm，必须换包名 |
 | 截图 | ✅ `screenshots.json` + `assets/screenshot-*.jpg`，市场会自动抓取 |
 | 市场卡片图标（可选） | ✅ `assets/icon-180.png`，条目里用 raw.githubusercontent 链接引用 |
 

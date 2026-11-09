@@ -43,8 +43,8 @@ dsh plugin --profile desktop add link:/path/to/dsh-plugin-comfyui
 
 | 依赖 | 说明 |
 | --- | --- |
-| DSH | 核心 `>=0.2.0-rc.1 <0.3.0-0`（本插件在 `0.2.0-rc.2` 上验证） |
-| Node | `>=20`（插件只用 Node 内置模块，无第三方依赖） |
+| DSH | 核心 `>=0.2.0-rc.2 <0.3.0-0`（本插件在 `0.2.0-rc.2` 与 `0.2.2-rc.1` 上验证） |
+| Node | `>=20`（插件只用 Node 内置模块，无第三方依赖）；注意 DSH 0.2.2 起宿主自身要求 Node `>=24.9` |
 | ComfyUI | 本机安装，portable 版（`ComfyUI/` + `python_embeded/`）或源码版均可；已在 `v0.34.0` 验证 |
 | 模型 | 至少一个 checkpoint 放在 `ComfyUI/models/checkpoints`（例如 SDXL / Illustrious 系） |
 
@@ -117,6 +117,9 @@ ComfyUI 可以放在任意目录：插件会在 `AIpainting`、`ComfyUI`、用�
 ## 自行验证
 
 ```sh
+# 用本机 DSH 宿主自己的工具契约校验三个工具定义 + engines.dsh 是否覆盖当前 DSH
+node scripts/check-dsh.mjs
+
 # 纯逻辑 + 真实服务 + 真实出图（需要 ComfyUI 在跑，或让插件自己拉起）
 node scripts/smoke.mjs
 
@@ -142,7 +145,11 @@ pwsh -File scripts/test-api.ps1
 - 本插件是标准的 DSH community plugin：`package.json` 声明 `dsh.bundle.patch`，`cordis.patch.yml` 插入一行 Host 插件，
   用 `dsh plugin add` 即可安装；
 - 官方 `@deepseek-ai/*` 包一个都没有被引入，因此不声明 peerDependencies，避免版本范围导致 `ERESOLVE`；
-  宿主兼容性用 `engines.dsh` 声明；
+  宿主兼容性用 `engines.dsh` 声明（DSH 0.2.1 起按该字段判断第三方插件兼容性，请勿删除）；
+- 针对 DSH 0.2.1 / 0.2.2 的插件侧变更逐项核对过：`tools.register()` 的 `output: { schema, render }` 契约、
+  `systemPrompt.section()`、`attachments.saveImage`、`ImageBlock`、`configEditor.edit`、Cordis 4.1 的
+  `on/effect/inject/get`（含 `prepend`）都与 0.2.0-rc.2 一致，本插件无需改动 API 调用；
+  唯一需要跟进的是 `engines.dsh` 声明，已更新；
 - 上架 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)（dsh-market 的目录来源）
   需要仓库创建满 1 天，条目 YAML 见 [docs/market-submission.md](docs/market-submission.md)；
 - 发布 npm 包后，`repository` 指向本仓库即可被市场自动关联；未发布也可以用 GitHub Release 的 tarball 安装。
@@ -194,6 +201,8 @@ ComfyUI instead of answering that it cannot draw.
 - Three model-facing tools: `comfyui_status`, `comfyui_start`, `comfyui_generate`.
 - Zero npm dependencies and no build step — Node built-ins only (`fetch`, `fs`, `child_process`).
 - Works with a local or remote ComfyUI; only local addresses may be auto-started.
-- Requires DSH core `>=0.2.0-rc.1 <0.3.0-0`, Node `>=20`, and at least one checkpoint in `ComfyUI/models/checkpoints`.
+- Requires DSH core `>=0.2.0-rc.2 <0.3.0-0` (verified on `0.2.0-rc.2` and `0.2.2-rc.1`), Node `>=20`
+  (DSH itself requires Node `>=24.9` since 0.2.2), and at least one checkpoint in `ComfyUI/models/checkpoints`.
 - Install: `dsh plugin --profile desktop add dsh-plugin-comfyui` (once published) or a linked local path.
-- Verify: `node scripts/smoke.mjs` and `node scripts/test-attachments.mjs`.
+- Verify: `node scripts/check-dsh.mjs` (Host tool contract + `engines.dsh`), `node scripts/smoke.mjs`
+  and `node scripts/test-attachments.mjs`.

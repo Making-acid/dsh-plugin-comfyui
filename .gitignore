@@ -5,6 +5,7 @@ comfyui-launch.log
 
 # Unrelated local projects that live beside this package
 dsh-synthv-studio/
+dsh-approval-preflight/
 .build/
 
 # Node / packaging artifacts
